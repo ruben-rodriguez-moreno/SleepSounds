@@ -1,86 +1,198 @@
-# SleepSounds Android App
+# 🌙 SleepSounds
 
-A beautiful Android application built with Kotlin and Jetpack Compose that provides relaxing sounds to help users sleep better.
+Una aplicación Android elegante y relajante que proporciona sonidos ambientales para ayudarte a dormir mejor.
 
-## Features
+## 📱 Capturas de Pantalla
 
-- 🎵 **Variety of Sounds**: Rain, ocean waves, forest ambience, white noise, and more
-- ▶️ **Easy Playback**: Simple play/pause buttons for each sound
-- 🌙 **Sleep-Focused Design**: Calming color scheme optimized for nighttime use
-- 📱 **Modern UI**: Built with Jetpack Compose and Material Design 3
+- **Pantalla de Splash**: Animación suave con el icono de la luna
+- **Pantalla Principal**: Lista de sonidos relajantes con controles intuitivos
+- **Reproductor Global**: Control centralizado de reproducción con temporizador
 
-## Screenshots
+## ✨ Características
 
-*Screenshots will be added once the app is running*
+### 🎵 Reproducción de Audio
+- **8 sonidos relajantes** incluidos:
+  - Lluvia suave
+  - Océano tranquilo
+  - Bosque nocturno
+  - Viento suave
+  - Fuego de chimenea
+  - Río sereno
+  - Ruido blanco
+  - Tormenta lejana
 
-## Technical Details
+### 🎮 Controles de Reproducción
+- **Play/Pause** individual para cada sonido
+- **Control global** cuando hay un sonido reproduciéndose
+- **Botón Stop** para detener completamente la reproducción
+- **Indicadores visuales** del estado de reproducción
 
-- **Language**: Kotlin
-- **UI Framework**: Jetpack Compose
-- **Architecture**: MVVM (ready for expansion)
-- **Target SDK**: 34
-- **Minimum SDK**: 24
-- **Build Tool**: Gradle with Kotlin DSL
+### ⏰ Temporizador de Sueño
+- **Sleep Timer** configurable: 10, 20, 30, 45 o 60 minutos
+- **Indicador visual** del tiempo restante
+- **Parada automática** cuando el temporizador expira
+- **Cancelación manual** del temporizador
 
-## Getting Started
+### 🔔 Notificaciones
+- **Controles en la barra de notificaciones**
+- **Reproducción en segundo plano**
+- **Gestión automática de permisos**
 
-### Prerequisites
+### 🎨 Diseño y UX
+- **Pantalla de splash animada** con la luna como protagonista
+- **Material Design 3** con tema nocturno
+- **Colores relajantes**: azul oscuro y púrpura suave
+- **Iconografía consistente** con tema de luna y sueño
+- **Animaciones suaves** y transiciones fluidas
 
-- Android Studio Hedgehog (2023.1.1) or later
-- JDK 8 or higher
-- Android SDK with API level 34
+## 🛠️ Tecnologías Utilizadas
 
-### Building the Project
+### Desarrollo
+- **Kotlin** - Lenguaje de programación principal
+- **Jetpack Compose** - Framework de UI moderna
+- **Material Design 3** - Sistema de diseño
+- **StateFlow** - Gestión de estado reactiva
 
-1. Clone the repository
-2. Open the project in Android Studio
-3. Sync the project with Gradle files
-4. Run the app on an emulator or physical device
+### Audio
+- **MediaPlayer** - Reproducción de audio nativa
+- **Notification** - Controles en segundo plano
+- **Timer** - Funcionalidad de temporizador de sueño
 
-### Development Setup
+### Arquitectura
+- **MVVM Pattern** - Separación de responsabilidades
+- **Repository Pattern** - Gestión de datos
+- **Compose State Management** - Estado reactivo de UI
 
+## 📋 Requisitos del Sistema
+
+- **Android 7.0** (API 24) o superior
+- **Kotlin 1.9+**
+- **Compose BOM 2024.02.00**
+- **Target SDK 34**
+
+## 🚀 Instalación y Configuración
+
+### Prerrequisitos
 ```bash
-# Build the project
-./gradlew build
-
-# Install on connected device
-./gradlew installDebug
-
-# Run tests
-./gradlew test
+Android Studio Hedgehog | 2023.1.1 o superior
+JDK 17 o superior
+Android SDK 34
 ```
 
-## Project Structure
-
-```
-app/
-├── src/main/
-│   ├── java/com/sleepsounds/app/
-│   │   ├── MainActivity.kt
-│   │   ├── SleepSoundsApp.kt
-│   │   └── ui/theme/
-│   ├── res/
-│   └── AndroidManifest.xml
-└── build.gradle.kts
+### Clonar el Repositorio
+```bash
+git clone https://github.com/tu-usuario/sleepsounds.git
+cd sleepsounds
 ```
 
-## Future Enhancements
+### Configurar el Proyecto
+1. Abrir el proyecto en Android Studio
+2. Sincronizar las dependencias de Gradle
+3. Compilar y ejecutar en dispositivo/emulador
 
-- [ ] Actual audio playback implementation
-- [ ] Timer functionality for sleep sessions
-- [ ] Custom sound mixing
-- [ ] Offline audio files
-- [ ] Sleep tracking integration
-- [ ] Widget support
+## 📂 Estructura del Proyecto
 
-## Contributing
+```
+app/src/main/java/com/sleepsounds/app/
+├── SleepSoundsApp.kt          # Componente principal de la app
+├── SplashScreen.kt            # Pantalla de splash animada
+├── MainActivity.kt            # Actividad principal
+├── audio/
+│   └── AudioManager.kt        # Gestión de reproducción de audio
+├── data/
+│   ├── Sound.kt              # Modelo de datos de sonidos
+│   └── SoundRepository.kt    # Repositorio de sonidos
+└── ui/theme/
+    ├── Color.kt              # Colores del tema
+    ├── Theme.kt              # Configuración del tema
+    └── Type.kt               # Tipografía
+```
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+## 🎨 Paleta de Colores
 
-## License
+- **Fondo Principal**: `#1A1B3A` (Azul oscuro nocturno)
+- **Acento Primario**: `#8B7EC8` (Púrpura suave)
+- **Texto Principal**: `#F5F5F7` (Blanco suave)
+- **Superficie**: Variaciones de azul y púrpura
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 🔊 Archivos de Audio
+
+Los sonidos están ubicados en `app/src/main/res/raw/`:
+- `rain.mp3` - Lluvia suave (10 min)
+- `ocean.mp3` - Océano tranquilo (15 min)
+- `forest.mp3` - Bosque nocturno (12 min)
+- `wind.mp3` - Viento suave (8 min)
+- `fireplace.mp3` - Fuego de chimenea (20 min)
+- `river.mp3` - Río sereno (14 min)
+- `whitenoise.mp3` - Ruido blanco (Continuo)
+- `thunder.mp3` - Tormenta lejana (18 min)
+
+## 🔧 Funcionalidades Técnicas
+
+### Gestión de Estado
+- **StateFlow** para estado reactivo
+- **Compose State** para UI reactiva
+- **Remember** para estado local de componentes
+
+### Gestión de Audio
+- **MediaPlayer** con loop automático
+- **Control de volumen** y fundido
+- **Gestión de recursos** automática
+
+### Notificaciones
+- **MediaStyle Notification** para controles
+- **Gestión automática de permisos** (Android 13+)
+- **Acciones**: Play, Pause, Stop
+
+## 🐛 Depuración y Desarrollo
+
+### Logs Importantes
+```kotlin
+AudioManager - Gestión de reproducción
+SplashScreen - Animaciones de entrada
+SoundRepository - Carga de datos
+```
+
+### Testing
+- Verificar permisos de notificación
+- Probar temporizador en diferentes intervalos
+- Validar reproducción en segundo plano
+
+## 📝 Roadmap Futuro
+
+- [ ] **Más sonidos**: Ampliar la biblioteca de audio
+- [ ] **Sonidos personalizados**: Importar archivos del usuario
+- [ ] **Mezcla de sonidos**: Reproducir múltiples sonidos simultáneamente
+- [ ] **Ecualizador**: Ajustes de frecuencia personalizados
+- [ ] **Perfiles de sueño**: Configuraciones guardadas
+- [ ] **Estadísticas**: Tracking de uso y hábitos de sueño
+- [ ] **Widget**: Control desde la pantalla de inicio
+- [ ] **Modo oscuro/claro**: Temas adaptativos
+
+## 👨‍💻 Desarrollo
+
+Este proyecto utiliza las mejores prácticas de desarrollo Android moderno:
+
+- **Clean Architecture** con separación clara de capas
+- **Jetpack Compose** para UI declarativa
+- **Material Design 3** para consistencia visual
+- **Gestión de estado reactiva** con StateFlow
+- **Manejo de recursos** eficiente y memoria optimizada
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Para contribuir:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
+3. Commit tus cambios (`git commit -m 'Añadir nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
+5. Abre un Pull Request
+
+---
+
+**Desarrollado con ❤️ para ayudarte a dormir mejor** 🌙✨

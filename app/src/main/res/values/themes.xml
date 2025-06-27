@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SleepSounds" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/sleep_primary</item>
+        <item name="colorPrimaryDark">@color/sleep_secondary</item>
+        <item name="android:colorBackground">@color/sleep_background</item>
+    </style>
+
+    <style name="Theme.SleepSounds" parent="Base.Theme.SleepSounds" />
+</resources>

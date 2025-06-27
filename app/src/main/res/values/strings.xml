@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SleepSounds</string>
+    <string name="play_sound">Play sound</string>
+    <string name="pause_sound">Pause sound</string>
+    <string name="rain_description">Gentle rainfall sounds</string>
+    <string name="ocean_description">Calming ocean waves</string>
+    <string name="forest_description">Peaceful forest ambience</string>
+</resources>

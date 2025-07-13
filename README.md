@@ -161,12 +161,9 @@ SoundRepository - Carga de datos
 ## 📝 Roadmap Futuro
 
 - [ ] **Más sonidos**: Ampliar la biblioteca de audio
-- [ ] **Sonidos personalizados**: Importar archivos del usuario
-- [ ] **Mezcla de sonidos**: Reproducir múltiples sonidos simultáneamente
 - [ ] **Ecualizador**: Ajustes de frecuencia personalizados
 - [ ] **Perfiles de sueño**: Configuraciones guardadas
 - [ ] **Estadísticas**: Tracking de uso y hábitos de sueño
-- [ ] **Widget**: Control desde la pantalla de inicio
 - [ ] **Modo oscuro/claro**: Temas adaptativos
 
 ## 👨‍💻 Desarrollo
